@@ -1,0 +1,103 @@
+.text-editor-widget {
+  height: 100%;
+  border: 1px solid;
+
+  &:hover {
+    .action-icons {
+      display: block;
+    }
+  }
+
+  .text-editor-widget-toolbar {
+    position: absolute;
+    top: -52px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .action-icons {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    z-index: 2;
+  }
+
+  .text-editor-widget-main {
+    position: relative;
+    height: 100%;
+
+    .text-editor-widget-main-textarea {
+      width: 100%;
+      height: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+/*interface TextEditorHeaderIconStyle {
+  active?: boolean;
+}
+
+export const textEditorWidgetToolbarIconStyle = new ComposableStyle<
+  TextEditorHeaderIconStyle
+>((css, props) => {
+  const colors = useComponentContext().colors;
+  const { active } = props;
+  return css`
+    background-color: ${active
+      ? colors.primaryColors.primary1
+      : colors.shades.shade13};
+    color: ${active ? colors.shades.shade13 : colors.shades.shade5};
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+
+    :hover {
+      background-color: ${active
+        ? colors.primaryColors.primary3
+        : colors.primaryColors.primary4};
+      color: ${active ? colors.shades.shade13 : colors.primaryColors.primary1};
+      cursor: pointer;
+    }
+  `;
+});
+
+interface TextBackground {
+  active: boolean;
+}
+
+export const textBackgroundStyle = new ComposableStyle<TextBackground>(
+  (css, props) => {
+    const colors = useComponentContext().colors;
+    const { active } = props;
+    return css`
+      position: relative;
+      display: inline-block;
+
+      .text-background-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: ${active ? colors.shades.shade13 : colors.shades.shade5};
+        background-color: ${active ? colors.shades.shade3 : ""};
+        :hover {
+          background-color: ${active
+            ? colors.primaryColors.primary3
+            : colors.primaryColors.primary4};
+          color: ${active
+            ? colors.shades.shade13
+            : colors.primaryColors.primary1};
+          cursor: pointer;
+        }
+      }
+    `;
+  }
+);
+*/
