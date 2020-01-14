@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b22f9d1.chunk.css",
-    "main.js": "/static/js/main.970df9a7.chunk.js",
-    "main.js.map": "/static/js/main.970df9a7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.db126025.js",
-    "runtime-main.js.map": "/static/js/runtime-main.db126025.js.map",
-    "static/css/2.400f043a.chunk.css": "/static/css/2.400f043a.chunk.css",
-    "static/js/2.b42f567e.chunk.js": "/static/js/2.b42f567e.chunk.js",
-    "static/js/2.b42f567e.chunk.js.map": "/static/js/2.b42f567e.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.abd88d37f8a60654335ba28b9044765d.js": "/precache-manifest.abd88d37f8a60654335ba28b9044765d.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.400f043a.chunk.css.map": "/static/css/2.400f043a.chunk.css.map",
-    "static/css/main.7b22f9d1.chunk.css.map": "/static/css/main.7b22f9d1.chunk.css.map",
-    "static/js/2.b42f567e.chunk.js.LICENSE": "/static/js/2.b42f567e.chunk.js.LICENSE",
-    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/meme-generator/static/css/main.7b22f9d1.chunk.css",
+    "main.js": "/meme-generator/static/js/main.e2e4430f.chunk.js",
+    "main.js.map": "/meme-generator/static/js/main.e2e4430f.chunk.js.map",
+    "runtime-main.js": "/meme-generator/static/js/runtime-main.57e0be95.js",
+    "runtime-main.js.map": "/meme-generator/static/js/runtime-main.57e0be95.js.map",
+    "static/css/2.f3c4d927.chunk.css": "/meme-generator/static/css/2.f3c4d927.chunk.css",
+    "static/js/2.b42f567e.chunk.js": "/meme-generator/static/js/2.b42f567e.chunk.js",
+    "static/js/2.b42f567e.chunk.js.map": "/meme-generator/static/js/2.b42f567e.chunk.js.map",
+    "index.html": "/meme-generator/index.html",
+    "precache-manifest.108509084295889f378711544e623d4c.js": "/meme-generator/precache-manifest.108509084295889f378711544e623d4c.js",
+    "service-worker.js": "/meme-generator/service-worker.js",
+    "static/css/2.f3c4d927.chunk.css.map": "/meme-generator/static/css/2.f3c4d927.chunk.css.map",
+    "static/css/main.7b22f9d1.chunk.css.map": "/meme-generator/static/css/main.7b22f9d1.chunk.css.map",
+    "static/js/2.b42f567e.chunk.js.LICENSE": "/meme-generator/static/js/2.b42f567e.chunk.js.LICENSE",
+    "static/media/font-awesome.min.css": "/meme-generator/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.db126025.js",
-    "static/css/2.400f043a.chunk.css",
+    "static/js/runtime-main.57e0be95.js",
+    "static/css/2.f3c4d927.chunk.css",
     "static/js/2.b42f567e.chunk.js",
     "static/css/main.7b22f9d1.chunk.css",
-    "static/js/main.970df9a7.chunk.js"
+    "static/js/main.e2e4430f.chunk.js"
   ]
 }
