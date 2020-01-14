@@ -1,1 +1,3 @@
-export interface ToolbarComponentProps {}
+export interface ToolbarComponentProps {
+  onIconClick: (id: string) => void;
+}

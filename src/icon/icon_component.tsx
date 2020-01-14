@@ -6,9 +6,11 @@ import {
 import { css, cx } from "emotion";
 
 export const iconComponentStyle = (props: IconComponentStyleProps) => css`
+  label: icon-component;
   width: ${props.size || "18px"};
   height: ${props.size || "18px"};
-  padding: 2px;
+  padding: 4px 8px;
+  margin: 4px;
   background-color: ${props.bgColor ? props.bgColor.default : undefined};
   color: ${props.color ? props.color.default : undefined};
   border-radius: 4px;
@@ -20,10 +22,14 @@ export const iconComponentStyle = (props: IconComponentStyleProps) => css`
 `;
 
 export const IconComponent = (props: IconComponentProps) => {
-  const { iconClass, styleProps } = props;
+  const { id, iconClass, styleProps } = props;
 
   return (
-    <div className={iconComponentStyle({ ...styleProps })}>
+    <div
+      id={id}
+      className={iconComponentStyle({ ...styleProps })}
+      onClick={() => props.onClick(id)}
+    >
       <i className={iconClass}></i>
     </div>
   );
