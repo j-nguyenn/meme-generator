@@ -1,6 +1,8 @@
 export interface IconComponentProps {
+  id: string;
   iconClass: string;
   styleProps?: IconComponentStyleProps;
+  onClick: (id: string) => void;
 }
 
 export interface IconComponentStyleProps {

@@ -256,7 +256,14 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
   }
 
   function renderToolbar(): JSX.Element {
-    return <ToolbarComponent />;
+    return (
+      <ToolbarComponent
+        onIconClick={id => {
+          console.log(id);
+          execCommand(id as Command);
+        }}
+      />
+    );
   }
 
   function renderMainframe(): JSX.Element {
