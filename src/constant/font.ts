@@ -13,5 +13,5 @@ export const fontFamilyItems = [
   { id: "3", label: "Calibri" },
   { id: "4", label: "Clear Sans" },
   { id: "5", label: "Comic Sans MS" },
-  { id: "6", label: "RobotoR" }
+  { id: "6", label: "Lato" }
 ];

@@ -1,10 +1,10 @@
 import * as React from "react";
-import { css, cx } from "emotion";
 import { ToolbarComponentProps } from "./toolbar_component.interfaces";
 import { IconComponent } from "../icon/icon_component";
 import { PRIMARY, BRIGHT } from "../constant/colors";
 import { ColorChooserComponent } from "../color_chooser/color_chooser_component";
 import { Command } from "../constant/variables";
+import { toolbarComponentStyle } from "./toolbar_component_style";
 
 export const ToolbarComponent = (props: ToolbarComponentProps) => {
   const iconStyle = {
@@ -24,7 +24,7 @@ export const ToolbarComponent = (props: ToolbarComponentProps) => {
   }
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className={toolbarComponentStyle({})}>
       <IconComponent
         id={Command.TEXT_BOLD}
         iconClass="fa fa-bold"

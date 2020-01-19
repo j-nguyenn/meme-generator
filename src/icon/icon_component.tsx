@@ -7,10 +7,10 @@ import { css, cx } from "emotion";
 
 export const iconComponentStyle = (props: IconComponentStyleProps) => css`
   label: icon-component;
-  width: ${props.size || "18px"};
-  height: ${props.size || "18px"};
+  width: ${props.size + "px" || "18px"};
+  height: ${props.size + "px" || "18px"};
   padding: 4px 8px;
-  margin: 4px;
+  margin: 0 4px;
   background-color: ${props.bgColor ? props.bgColor.default : undefined};
   color: ${props.color ? props.color.default : undefined};
   border-radius: 4px;
