@@ -38,6 +38,7 @@ export const colorChooserStyle = (props: ColorChooserProps) => css`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 4px;
 
   .color-chooser-wrapper {
     width: ${props.size}px;
