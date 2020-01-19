@@ -3,6 +3,7 @@ import { fontSizeItems, fontFamilyItems } from "../constant/font";
 import { Command, BackGroundType } from "../constant/variables";
 import { TextEditorComponentProps } from "./text_editor_component.interfaces";
 import { ToolbarComponent } from "../toolbar/toolbar_component";
+import { textEditorComponentStyle } from "./text_editor_component_style";
 
 // helpers
 function rgbToHex(rgb: string): string {
@@ -268,7 +269,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
 
   function renderMainframe(): JSX.Element {
     return (
-      <div className="text-editor-widget-main" style={{ border: "1px solid" }}>
+      <div className="text-editor-widget-main">
         <div
           tabIndex={0}
           onMouseUp={onMouseTextEditorUp}
@@ -297,7 +298,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
   }
 
   return (
-    <div>
+    <div className={textEditorComponentStyle({})}>
       {renderToolbar()}
       {renderMainframe()}
     </div>
