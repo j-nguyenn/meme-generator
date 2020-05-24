@@ -8,6 +8,10 @@ export enum Command {
   ALIGN_LEFT = "justifyLeft",
   ALIGN_RIGHT = "justifyRight",
   ALIGN_CENTER = "justifyCenter",
+  STRIKE_THROUGH = "strikeThrough",
+  UNDO = "undo",
+  REDO = "redo",
+  REMOVE_FORMAT = "removeFormat",
 }
 
 export enum BackGroundType {
