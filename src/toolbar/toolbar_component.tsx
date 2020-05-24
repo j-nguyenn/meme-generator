@@ -7,16 +7,17 @@ import { Command } from "../constant/variables";
 import { toolbarComponentStyle } from "./toolbar_component_style";
 
 export const ToolbarComponent = (props: ToolbarComponentProps) => {
+  const { bold, italic, underline, align } = props;
   const iconStyle = {
     size: 18,
     color: {
-      default: PRIMARY.PRIMARY_4,
-      hover: BRIGHT.BRIGHT_2
+      default: BRIGHT.WHITE,
+      hover: BRIGHT.WHITE,
     },
     bgColor: {
       default: PRIMARY.PRIMARY_3,
-      hover: PRIMARY.PRIMARY_2
-    }
+      hover: PRIMARY.PRIMARY_2,
+    },
   };
 
   function handleIconOnClick(id: string): void {
@@ -27,39 +28,45 @@ export const ToolbarComponent = (props: ToolbarComponentProps) => {
     <div className={toolbarComponentStyle({})}>
       <IconComponent
         id={Command.TEXT_BOLD}
+        isActive={bold}
         iconClass="fa fa-bold"
         styleProps={iconStyle}
-        onClick={id => handleIconOnClick(id)}
+        onClick={(id) => handleIconOnClick(id)}
       />
       <IconComponent
         id={Command.TEXT_ITALIC}
+        isActive={italic}
         iconClass="fa fa-italic"
         styleProps={iconStyle}
-        onClick={id => handleIconOnClick(id)}
+        onClick={(id) => handleIconOnClick(id)}
       />
       <IconComponent
         id={Command.TEXT_UNDERLINE}
+        isActive={underline}
         iconClass="fa fa-underline"
         styleProps={iconStyle}
-        onClick={id => handleIconOnClick(id)}
+        onClick={(id) => handleIconOnClick(id)}
       />
       <IconComponent
         id={Command.ALIGN_LEFT}
+        isActive={align === Command.ALIGN_LEFT}
         iconClass="fa fa-align-left"
         styleProps={iconStyle}
-        onClick={id => handleIconOnClick(id)}
+        onClick={(id) => handleIconOnClick(id)}
       />
       <IconComponent
         id={Command.ALIGN_RIGHT}
+        isActive={align === Command.ALIGN_RIGHT}
         iconClass="fa fa-align-right"
         styleProps={iconStyle}
-        onClick={id => handleIconOnClick(id)}
+        onClick={(id) => handleIconOnClick(id)}
       />
       <IconComponent
         id={Command.ALIGN_CENTER}
+        isActive={align === Command.ALIGN_CENTER}
         iconClass="fa fa-align-center"
         styleProps={iconStyle}
-        onClick={id => handleIconOnClick(id)}
+        onClick={(id) => handleIconOnClick(id)}
       />
       <ColorChooserComponent size={22} initialValue={PRIMARY.PRIMARY_1} />
     </div>

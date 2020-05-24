@@ -1,5 +1,6 @@
 export interface IconComponentProps {
   id: string;
+  isActive: boolean;
   iconClass: string;
   styleProps?: IconComponentStyleProps;
   onClick: (id: string) => void;

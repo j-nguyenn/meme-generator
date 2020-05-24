@@ -7,11 +7,8 @@ import { textEditorComponentStyle } from "./text_editor_component_style";
 
 // helpers
 function rgbToHex(rgb: string): string {
-  const splittedRGB = rgb
-    .split("(")[1]
-    .split(")")[0]
-    .split(",");
-  const hexString = splittedRGB.map(x => {
+  const splittedRGB = rgb.split("(")[1].split(")")[0].split(",");
+  const hexString = splittedRGB.map((x) => {
     x = parseInt(x).toString(16);
     return x.length === 1 ? `0${x}` : x;
   });
@@ -46,7 +43,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
     start: 0,
     end: 0,
     startNode: undefined,
-    endNode: undefined
+    endNode: undefined,
   });
 
   function setCaretPosition(): void {
@@ -58,7 +55,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
         end: endOffset,
         endNode: endContainer,
         start: startOffset,
-        startNode: startContainer
+        startNode: startContainer,
       };
     }
   }
@@ -76,7 +73,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
       anchorNode,
       anchorOffset,
       focusNode,
-      focusOffset
+      focusOffset,
     } = currentSelection;
 
     if (
@@ -103,8 +100,8 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
       Command.FONT_SIZE,
       Command.ALIGN_LEFT,
       Command.ALIGN_RIGHT,
-      Command.ALIGN_CENTER
-    ].forEach(command => {
+      Command.ALIGN_CENTER,
+    ].forEach((command) => {
       const currentState: boolean = document.queryCommandState(command);
       const currentValue: string = document.queryCommandValue(command);
 
@@ -142,7 +139,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
           break;
         case Command.FONT_FAMILY:
           const fontName = fontFamilyItems.find(
-            item => item.label === currentValue
+            (item) => item.label === currentValue
           );
           fontName && setFontFamily(fontName.id);
           break;
@@ -222,7 +219,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
           setFontSize(value);
           break;
         case Command.FONT_FAMILY:
-          const fontName = fontFamilyItems.find(item => item.label === value);
+          const fontName = fontFamilyItems.find((item) => item.label === value);
           fontName && setFontFamily(fontName.id);
           break;
         default:
@@ -259,7 +256,11 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
   function renderToolbar(): JSX.Element {
     return (
       <ToolbarComponent
-        onIconClick={id => {
+        bold={bold}
+        italic={italic}
+        underline={underline}
+        align={align}
+        onIconClick={(id) => {
           console.log(id);
           execCommand(id as Command);
         }}
@@ -276,7 +277,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
           onKeyUp={onKeyTextEditorUp}
           contentEditable={true}
           dangerouslySetInnerHTML={{
-            __html: initTextHTML
+            __html: initTextHTML,
           }}
           className="text-editor-widget-main-textarea"
           ref={textAreaRef}
@@ -290,7 +291,7 @@ export const TextEditorWidgetComponent = (props: TextEditorComponentProps) => {
             backgroundImage: `${
               backgroundImage ? `url(${backgroundImage})` : ""
             }`,
-            backgroundColor
+            backgroundColor,
           }}
         />
       </div>
